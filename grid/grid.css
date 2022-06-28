@@ -37,14 +37,48 @@ body {
 }
 
 .menu-bar-container{
-    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.download-upload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.download-btn{
+    height: 80%;
+    padding-top:0.3rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    background-color: var(--darkest);
+    color: var(--lighter);
+    border: solid;
+    border-width:0;
+    border-radius: 1rem;
+}
+
+.upload-btn{
+    height: 80%;
+    padding-top:0.3rem;
+        padding-left:1rem;
+        padding-right:1rem;
+        margin-right: 3rem;
+        background-color: var(--light);
+        color: var(--darkest);
+        border: solid;
+        border-width:0;
+        border-radius: 1rem;
+        margin-left:0.5rem;
 }
 
 .menu-bar {
     height: 5vh;
     display: flex;
     margin-left:1rem;
-    margin-bottom:1rem;
 }
 
 .menu-item {

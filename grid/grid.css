@@ -61,6 +61,21 @@ body {
     border-radius: 1rem;
 }
 
+.download-btn:hover{
+    height: 80%;
+    padding-top:0.3rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    background-color: var(--dark);
+    color: var(--lighter);
+    border: solid;
+    border-width:0;
+    border-radius: 1rem;
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
 .upload-btn{
     height: 80%;
     padding-top:0.3rem;
@@ -68,11 +83,28 @@ body {
         padding-right:1rem;
         margin-right: 3rem;
         background-color: var(--light);
-        color: var(--darkest);
+        color: var(--text-color-1);
         border: solid;
         border-width:0;
         border-radius: 1rem;
         margin-left:0.5rem;
+}
+
+.upload-btn:hover{
+    height: 80%;
+    padding-top:0.3rem;
+        padding-left:1rem;
+        padding-right:1rem;
+        margin-right: 3rem;
+        background-color: var(--dark);
+        color: var(--text-color-1);
+        border: solid;
+        border-width:0;
+        border-radius: 1rem;
+        margin-left:0.5rem;
+        transform: scale(1.05);
+        transition: 0.3s;
+        cursor: pointer;
 }
 
 .menu-bar {
@@ -89,6 +121,9 @@ body {
     font-size: small;
     font-weight: 600;
     display: flex;
+    border: solid;
+    border-width:0;
+    border-radius: 1rem;
     align-items: center;
 }
 
@@ -102,26 +137,33 @@ body {
 
 .menu-item:hover {
     background-color: var(--darkest);
+    color: var(--lighter);
     border: solid;
     border-width:0;
     border-radius: 1rem;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .menu-item.selected:hover {
-    background-color: #fff;
+    background-color: var(--dark);
+    color: var(--text-color-1);
+    border: solid;
+    border-width:0;
+    border-radius: 1rem;
+    transition: 0.3s;
     cursor: default;
 } 
 
 .menu-icon-bar {
     height: 6vh;
-    background-color: var(--lighter);
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .menu-icon {
-   padding-left: 10px;
+   padding-left: 2rem;
    padding-right: 10px;
    height: 100%;
    display: flex;
@@ -129,7 +171,7 @@ body {
 }
 
 .menu-icon:hover {
-    background-color: var(--lighter);
+    color: var(--darkest);
     cursor: pointer;
 }
 
@@ -235,7 +277,7 @@ body {
 }
 
 .sheet-tab.selected {
-    border-bottom: 4px solidvar(--darkest);;
+    border-bottom: 4px solid var(--darkest);;
 }
 
 .sheet-tab:hover {
@@ -311,7 +353,7 @@ body {
 }
 
 .menu-icon.selected {
-    background-color: lightgray;
+   color:var(--darkest);
 }
 
 .input-cell.top-cell-selected {

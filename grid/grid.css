@@ -159,7 +159,6 @@ body {
     height: 6vh;
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
 }
 
 .menu-icon {
@@ -190,12 +189,12 @@ body {
 }
 
 .formula-bar {
-    height: 5vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
-    background-color: rgb(241, 241, 241);
+    background-color: var(--lighter);
 }
 
 .data-container {
@@ -207,13 +206,13 @@ body {
 .select-all {
     width: 30px;
     height: 30px;
-    border: 1px solid lightgray;
+    border: 1px solid var(--text-color-2);
 }
 
 .column-name-container {
     width: calc(100vw - 30px);
     height: 30px;
-    border: 1px solid lightgray;
+    border: 1px solid var(--text-color-2);
     display: flex;
     overflow: hidden;
 }
@@ -221,14 +220,14 @@ body {
 .row-name-container {
     width: 30px;
     height: calc(75vh - 30px);
-    border: 1px solid lightgray;
+    border: 1px solid var(--text-color-2);
     overflow: hidden;
 }
 
 .input-cell-container {
     width: calc(100vw - 30px);
     height: calc(75vh - 30px);
-    border: 1px solid lightgray;
+    border: 1px solid var(--text-color-2);
     overflow: scroll;
 }
 
@@ -328,7 +327,7 @@ body {
 
 .formula-editor {
     height: 70%;
-    border: 1px solid lightgray;
+    border: 2px solid var(--text-color-2);
     background-color: #fff;
     padding-left: 0.7rem;
     padding-right: 0.7rem;

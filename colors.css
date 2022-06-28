@@ -1,0 +1,10 @@
+
+*{
+    --darkest : #42C2FF;
+    --dark : #85F4FF;
+    --light : #B8FFF9;
+    --lighter : #EFFFFD; 
+
+    --text-color-1 : #575D62;
+    --text-color-2 : rgb(178,184,191);
+}

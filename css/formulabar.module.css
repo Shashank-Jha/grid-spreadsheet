@@ -1,0 +1,23 @@
+.formula-bar {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background-color: var(--lighter);
+}
+
+
+.formula-editor {
+    height: 70%;
+    border: 1px solid var(--text-color-2);
+    background-color: #fff;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.formula-input {
+    width: calc(100vw - 160px);
+    outline-color: var(--darkest);;
+}

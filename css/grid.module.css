@@ -1,0 +1,51 @@
+.data-container {
+    position:relative;
+    height: calc(100vh - 3rem - 3rem - 2rem - 3rem);
+    overflow: scroll;
+}
+
+.select-all {
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--light);
+    position: fixed;
+    z-index: 4;
+}
+
+.column-name-container {
+    display: flex;
+    position: sticky;
+    top:0;
+    margin-left: 2rem;
+}
+
+.row-name-container {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+}
+
+.input-cell-container {
+    position:absolute;
+    top:1.8rem;
+    left:1.8rem;
+    background-color: var(--text-color-2);
+}
+
+.address-row {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dfe4ea;
+}
+.address-col {
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    border-left-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

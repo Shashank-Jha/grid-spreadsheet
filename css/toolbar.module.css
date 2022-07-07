@@ -1,0 +1,23 @@
+
+.menu-icon-bar {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+   padding-left: 2rem;
+   padding-right: 10px;
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+
+.menu-icon.selected {
+    color:var(--darkest);
+ }
+
+.menu-icon:hover {
+    color: var(--darkest);
+    cursor: pointer;
+}

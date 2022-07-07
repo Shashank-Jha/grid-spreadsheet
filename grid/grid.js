@@ -11,9 +11,9 @@ for(let i=1;i<=row;i++){
     rowNameContainer.appendChild(rowNameDiv);
 }
 
-for(let i=1;i<=col;i++){
+for(let i=0;i<=col;i++){
     const colNameDiv = document.createElement("div");
     colNameDiv.setAttribute("class", "address-col");
-    colNameDiv.innerText = i;
+    colNameDiv.innerText = String.fromCharCode(65+i);
     colNameContainer.appendChild(colNameDiv);
 }

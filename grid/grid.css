@@ -1,11 +1,6 @@
-@import url('/assets.css');
-@import url('/css/grid.module.css');
-@import url('/css/formulabar.module.css');
-@import url('/css/nav.module.css');
 
 body {
     font-family: 'Montserrat', sans-serif;
-    color: var(--text-color-2);
     overflow: hidden;
     margin:0;
     padding:0;
@@ -16,78 +11,78 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    height: 100vh;
-    position: relative;
-}
-
-.font-family-selector {
-    width: 150px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.selector {
-    height: 30px;
-    font-size: 18px;
-}
-
-.selector option {
-    font-size: 18px;
-}
-
-
-.cell-container{
+.page-actions-cont {
+    height: 3rem;
+    background-color: #218c74;
     display: flex;
+    align-items: flex-end;
+    padding-left: 1rem;
 }
-
-.cell{
+.page-action {
+    width: 3.5rem;
     height: 2rem;
-    width:5rem;
+    text-align: center;
+    color: #f1f2f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.spacer{
-    margin-bottom: 50%; 
-  }
-
-.sheet-bar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 7vh;
+.selected-page-action {
+    background-color: #f1f2f6;
+    color: #218c74;
+}
+.cellprop-actions-cont {
+    height: 3rem;
+    background-color: #ecf0f1;
     display: flex;
     align-items: center;
-    background: white;
+    padding-left: 1rem;
 }
-.scroller {
-    width: 70px;
+.cellprop-actions-cont > * {
+    display: inline-block;
+    margin-right: 1rem;
 }
-.icon-left-scroll, .icon-right-scroll {
-    font-size: 30px;
-}
-
-.icon-left-scroll:hover, .icon-right-scroll:hover {
-    background-color: lightgray;
+.cellprop-actions-cont > *:hover {
     cursor: pointer;
 }
-
-.icon-add {
-    color: var(--dark);
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 40px;
+.cellprop-actions-cont > select {
+    border: none;
+    border-radius: 2px;
+    outline: none;
 }
-
-.icon-add:hover {
-    cursor: pointer;
-    transform: scale(1.2);
+.font-family-prop {
+    padding: 0.2rem;
 }
-.sheet-tab-container {
-    border: 1px solid lightgray;
-    width: calc(100vw - 110px);
+.font-size-prop {
+    padding: 0.2rem;
+}
+.formula-actions-cont {
+    height: 2rem;
+    background-color: #ecf0f1;
+    padding-left: 1rem;
     display: flex;
+    align-items: center;
 }
-.sheet-tab {
+.formula-actions-cont > * {
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+.formula-icon {
+    width: 1.2rem; 
+}
+.address-bar {
+    width: 5rem;
+    text-align: center;
+}
+.formula-bar {
+    width: calc( 100vw - 5rem - 0.7rem - 0.7rem - 0.7rem );
+}
+.formula-actions-cont > input {
+    border: none;
+    outline: none;
+    height: 70%;
+}
+.sheet-actions-cont {
     height: 3rem;
     display: flex;
     align-items: center;
@@ -95,172 +90,107 @@ body {
     padding-right: 0.5rem;
     gap: 1rem;
     background-color: #ecf0f1;
-    /*  */
-    /* padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    width: 80px;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    border-right: 1px solid lightgray; */
 }
-
-.sheet-tab.selected {
-    border-bottom: 4px solid var(--darkest);;
+.sheet-actions-cont > * {
+    display: inline-block;
 }
-
-.sheet-tab:hover {
-    cursor: pointer;
-    background-color: lightgray;
+.sheet-add-icon {
+    width: 2vw;
 }
-
-.sheet-tab.selected:hover {
+.sheet-add-icon:hover {
     cursor: default;
-    background-color: #fff;
 }
 
-.column-name {
-    min-width: 100px;
+.sheets-folder-cont {
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-right: 1px solid lightgray;
+    height: 80%;
+    width: 5rem;
+    width: calc( 100vw - 2vw );
+    overflow: auto;
+}
+.sheet-folder {
+    height: 80%;
+    text-decoration: underline;
     font-weight: bold;
-}
-
-.row-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 25px;
-    border-bottom: 1px solid lightgray;
-    font-weight: bold;
-}
-
-.cell-row {
-    display: flex;
-}
-
-.input-cell {
-    min-width: 100px;
-    min-height: 25px;
-    border-right: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-    outline-color: var(--darkest);;
-    font-size: 14px;
-    font-family: 'Noto Sans';
-}
-
-.input-cell.selected {
-    border: 2px solid var(--darkest);;
-}
-
-
-.selected-cell {
-    width: 120px;
-}
-
-.function-sign {
-    width: 40px;
+    text-decoration-thickness: 3px;
+    font-size: 0.9rem;
+    /* background-color: lightblue; */
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
-.input-cell.top-cell-selected {
-    border-top: none;
+.sheet-content {
+    width: 5rem;
+    /* background-color: lightgreen; */
 }
 
-.input-cell.bottom-cell-selected {
-    border-bottom: 1px solid lightgray;
+.grid-cont {
+    height: calc( 100vh - 3rem - 3rem - 2rem - 3rem );
+    position: relative;
+    overflow: scroll;
+    background-color: #ecf0f1;
 }
 
-.input-cell.right-cell-selected {
-    border-right: 1px solid lightgray;
+.top-left-dummy-box {
+    height: 2rem;
+    width: 2rem;
+    background-color: #747d8c;
+    position: fixed;
+    z-index: 4;
 }
-
-.input-cell.left-cell-selected {
-    border-left: none;
+.address-col-cont {
+    position: sticky;
+    top: 2rem;
+    left: 0;
 }
-
-.color-picker {
+.address-row-cont {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 2rem;
+}
+.cells-cont {
     position: absolute;
-    width: 26px;
-    height: 12px;
-    border: none;
-    padding: 0;
-    top: 30px;
-    left: 9px;
-    cursor: pointer;
+    top: 0;
+    left: 2rem;
 }
 
-.icon-color-fill, .icon-color-text {
+.address-col {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dfe4ea;
+}
+.address-row {
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-cont {
+    display: flex;
+}
+.cell {
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    outline: none;
+}
+
+.color-prop {
     position: relative;
 }
-
-.sheet-options-modal {
+.color-prop > input {
+    opacity: 0;
     position: absolute;
-    bottom: 4vh;
-    background-color: #fff;
-    height: 60px;
-    width: 70px;
-    box-shadow: 0 0 3px 1px lightgray;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
-
-.sheet-rename,.sheet-delete {
-    height: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sheet-delete:hover, .sheet-rename:hover {
-    background-color: lightgray;
-    cursor: pointer;
-}
-
-.sheet-rename-modal {
-    position: absolute;
-    height: 180px;
-    width: 300px;
-    top: calc(100vh / 2 - 90px);
-    left: calc(100vw / 2 - 150px);
-    background-color: white;
-    text-align: center;
-    box-shadow: 0 0 3px 1px lightgray;
-}
-
-.action-buttons {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.modal-title {
-    font-size: 20px;
-}
-
-.new-sheet-name {
-    height: 26px;
-    font-size: 18px;
-    outline-color: var(--darkest);;
-}
-
-.submit-button {
-    cursor: pointer;
-    background-color: var(--darkest);;
-    color: white;
-    padding: 8px;
-}
-
-.cancel-button {
-    cursor: pointer;
-    background-color: lightgray;
-    padding: 8px;
-}
-

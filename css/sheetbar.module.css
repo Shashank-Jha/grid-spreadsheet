@@ -1,0 +1,74 @@
+.sheet-bar{
+    overflow: auto;
+}
+
+.sheet-bar {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    background: white;
+}
+.scroller {
+    width: 70px;
+}
+.icon-left-scroll, .icon-right-scroll {
+    font-size: 30px;
+}
+
+.icon-left-scroll:hover, .icon-right-scroll:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.icon-add {
+    color: var(--dark);
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 40px;
+}
+
+.icon-add:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.sheet-tab-container {
+    border: 1px solid lightgray;
+    width: calc(100vw - 110px);
+    display: flex;
+}
+.sheet-tab {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    gap: 1rem;
+    background-color: #ecf0f1;
+    /*  */
+    /* padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-right: 1px solid lightgray; */
+}
+
+.sheet-tab.selected {
+    border-bottom: 4px solid var(--darkest);;
+}
+
+.sheet-tab:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.sheet-tab.selected:hover {
+    cursor: default;
+    background-color: #fff;
+}

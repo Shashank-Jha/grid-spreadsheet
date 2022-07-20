@@ -1,0 +1,9 @@
+.cell-container{
+    display: flex;
+}
+
+.cell{
+    border:0.5px solid var(--text-color-2);
+    height: 2rem;
+    width: 5rem;
+}

@@ -1,6 +1,8 @@
 let rows = 100;
 let cols = 26;
 
+let selectedCellDisplay = document.querySelector(".address-bar");
+
 let addressColCont = document.querySelector(".address-col-cont");
 let addressRowCont = document.querySelector(".address-row-cont");
 let cellsCont = document.querySelector(".cells-cont");
@@ -26,7 +28,17 @@ for (let i = 0;i < rows;i++) {
     for (let j = 0;j < cols;j++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
+        cell.setAttribute("contentEditable","true");
+        addListenerForAddressBarDisplay(cell,i,j);
         rowCont.appendChild(cell);
     }
     cellsCont.appendChild(rowCont);
+}
+
+function addListenerForAddressBarDisplay(cell, i, j){
+    cell.addEventListener('click',(e)=>{
+        let rowId = i+1;
+        let colId = String.fromCharCode(65 + j);
+        selectedCellDisplay.value = `${colId}${rowId}`;
+    })
 }
